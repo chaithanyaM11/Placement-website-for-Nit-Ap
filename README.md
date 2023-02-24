@@ -1,1 +1,1 @@
-# Placement-website-for-NIt-Ap
+# Placement-website-for-Nit-Ap
