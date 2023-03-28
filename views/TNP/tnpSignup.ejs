@@ -1,0 +1,45 @@
+<%- include("../partials/login-header"); -%>
+
+<div class="container">
+  <div class="text-center">
+    <h2>Register now!!</h2>
+    <p class="lead">Enter your details</p>
+  </div>
+  <div class="row justify-content-center my-5">
+    <div class="col-lg-6">
+      <form action="/tnpSignup" method="post" id="Signup-form">
+
+        <label class="form-label">Name</label>
+        <input type="text" name="Name" class="form-control signup" placeholder="As per details given to our institution"/>
+        <div class="error"></div>
+
+        <label class="form-label">Mail id</label>
+        <input type="email" name="Mail_id" id="email" class="form-control signup" placeholder="Enter your mail id given by our institution"/>
+        <div class="error"></div>
+
+        <label class="form-label">Department</label>
+        <input type="text" name="Department" class="form-control signup" placeholder="Name your department"/>
+        <div class="error"></div>
+
+        <label class="form-label">UserName</label>
+        <input type="text" name="UserName" class="form-control signup" placeholder="Give yourself a username"/>
+        <div class="error"></div>
+
+        <label class="form-label">Password</label>
+        <input class="form-control signup" id="password" name="Password" type="password" placeholder="Enter your password"/><br>
+        <div class="error"></div>
+
+        <label class="form-label"> Confirm Password</label>
+        <input class="form-control signup" id="confpass" name="confPassword" type="text" placeholder="Enter your password"/><br>
+        <div class="error"></div>
+
+        <button type="submit" class="btn btn-primary" name="Button" value="Submit">Submit</button>
+        <div class="error"></div>
+
+      </form>
+     </div>
+  </div>
+</div>
+
+<script src="js/signup.js"></script>
+</body>

@@ -1,0 +1,19 @@
+<%- include("../partials/header"); -%>
+
+
+<table>
+    <tr>
+        <th> Company Name </th>
+        <th> Type </th>
+        <th> Branch </th>
+        <th> Previous year Intake</th>
+    </tr>
+    <% comp.forEach(function(company){ %>
+    <tr>
+        <td> <a href= "/Companies/<%= company.Name%>"> <%= company.Name %> </a></td>
+        <td> <%= company.Type %> </td>
+        <td> <%= company.Branches.join(", ") %> </td>
+        <td> <%= company.PrevYearIntake[company.PrevYearIntake.length - 1] %> </td>
+    </tr>
+    <% }); %>
+</table>

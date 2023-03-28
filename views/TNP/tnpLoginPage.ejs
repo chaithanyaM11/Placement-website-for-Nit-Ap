@@ -1,0 +1,33 @@
+<%- include("../partials/login-header"); -%>
+
+
+<div class="container">
+  <div class="text-center">
+    <h2>TNP Login page</h2>
+  </div>
+  <div class="row justify-content-center my-5">
+    <div class="col-lg-6">
+      <form action="/tnpLogin" method="post" style="margin-bottom: 10px;" id = "login-form">
+        <label class="form-label ">User Name</label>
+        <input type="text" class="form-control" name="UserName" placeholder="User name" id="username"/>
+
+        <label class="form-label">Password</label>
+        <input class="form-control" type="password" name="Password" placeholder="password" style="margin-bottom: 10px;" id="password" />
+        
+        <input type="checkbox" id="checkbox"/>
+        <label class="form-label"> Show Password </label>
+        <br>
+
+        <button type="" name="counter" class="btn btn-info btn-md" id="button">Login</button>
+        <br>
+
+        <div class="error" id="error"></div>
+      </form>
+      <p>Not a member,  <a href="/tnpSignup">Click here</a> to Create an acc in tnp cell</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
