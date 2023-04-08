@@ -1,6 +1,5 @@
-//jshint esversion:6
-
 const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/placementDB");
 
 const CompanySchema = mongoose.Schema({
     Name: {type: String,required: true},
