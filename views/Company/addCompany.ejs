@@ -1,0 +1,134 @@
+<%- include("../partials/tnp-header"); -%>
+
+    <div class="container">
+        <div class="text-center">
+          <h2>Enter the details here!!!</h2>
+        </div>
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-6">
+            <form action="/TNPPage/addCompany" method="post" id="company-form">
+
+              <label class="form-label">Company Name</label>
+              <input type="text" name="Name" class="form-control" placeholder="As per details given to our institution"/>
+              <div class="error"></div>
+              
+
+              <label class="form-label">Company Mail</label>
+              <input type="email" id="email" name="Mail_id" class="form-control" placeholder="Enter companie's official mail id"/>
+              <div class="error"></div>
+              
+
+              <label class="form-label">Description</label>
+              <textarea type="textarea" name="Description" class="form-control" placeholder="Say about the company" rows="3"></textarea>
+              <div class="error"></div>
+              
+
+              <label class="form-label">PrevYearIntake</label>
+              <input type="number" name="PrevYearIntake" class="form-control"/>
+              <div class="error"></div>
+              
+
+              <label class="form-label">CurrentYearIntake</label>
+              <input class="form-control" name="CurrentYearIntake" type="number"/>
+              <div class="error"></div>
+              
+              
+              <label class="form-label">Type</label>
+              <select name="Type" id="type" class="form-control">
+                <option value="IT">IT</option>
+                <option value="Non-IT">Non-IT</option>
+                <option value="Both">Both</option>
+              </select>
+              <div class="error"></div>
+              
+
+              <label class="form-label" for="branch">Branch</label>
+              <p>Choose the branches that the company offer's the job </p>
+              <div id="Branches">
+                    <input class="form-check-input" name="Branches[]" type="checkbox" value="CSE" id="CSE">
+                    <label class="form-check-label" for="CSE"> CSE </label>
+                    <div class="error"></div>
+
+                    <input class="form-check-input" name="Branches[]" type="checkbox" value="ECE" id="ECE">
+                    <label class="form-check-label" for="ECE"> ECE </label>
+                    <div class="error"></div>
+
+                    <input class="form-check-input" name="Branches[]" type="checkbox" value="EEE" id="EEE">
+                    <label class="form-check-label" for="EEE"> EEE </label>
+                    <div class="error"></div>
+
+                    <input class="form-check-input" name="Branches[]" type="checkbox" value="MECH" id="MECH">
+                    <label class="form-check-label" for="MECH"> MECH </label>
+                    <div class="error"></div>
+
+                    <input class="form-check-input" name="Branches[]" type="checkbox" value="CIVIL" id="CIVIL">
+                    <label class="form-check-label" for="CIVIL"> CIVIL </label>
+                    <div class="error"></div>
+
+                    <input class="form-check-input" name="Branches[]" type="checkbox" value="CHEM" id="CHEM">
+                    <label class="form-check-label" for="CHEM"> CHEM </label>
+                    <div class="error"></div>
+
+                    <input class="form-check-input" name="Branches[]" type="checkbox" value="BIOTECH" id="BIOTECH">
+                    <label class="form-check-label" for="BIOTECH"> BIOTECH </label>
+                    <div class="error"></div>
+
+                    <input class="form-check-input" name="Branches[]" type="checkbox" value="MME" id="MME">
+                    <label class="form-check-label" for="MME"> MME </label>
+                    <div class="error"></div>
+              </div>
+
+              <!-- <select name="Branches[]" id="branch" value="thaluputhee" class="form-control">
+                <option value="Thalapathy">Select Branches you offer...</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="CHEM">CHEM</option>
+                <option value="BIOTECH">BIOTECH</option>
+                <option value="MME">MME</option>
+              </select>     
+              <div ></div> 
+              <div class="error" id="selected-Branch"></div>
+         -->
+              
+              <label class="form-label">Roles</label>
+              <div id="Roles">
+                <input type="text" class="form-control" name="Roles[]" placeholder="Enter the roles they offered till now.."/>
+                <div class="error"></div>
+              </div>        
+              <button type="button" class="btn btn-primary" id="add-role" name="role-btn" value="role"> Add new</button>
+              <div class="error"></div>
+
+
+              <label class="form-label">CTC Offered</label>
+              <div id="CTC">
+                <input type="number" class="form-control" name="CTC[]" id="" placeholder="Enter the ctc they offered in prev year... (in lpa)"/>
+                <div class="error"></div>
+              </div>           
+              <button type="button" class="btn btn-primary" id="add-ctc" name="ctc-btn" value="ctc"> Add new</button>
+              <div class="error"></div>
+
+
+              <label class="form-label">Hiring Proccess</label>
+              <div id="Hiring">
+                <input type="text" name="Hiring_Process" class="form-control" placeholder="Enter the Hiring Process.."/>
+                <div class="error"></div>
+              </div>
+              <button type="button" class="btn btn-primary" id="add-proc" name="prc-btn" value="proc">Next round</button> 
+              <div class="error"></div>
+
+              <label class="form-label">Locations</label>
+                <input type="text" name="Location" id="" class="form-control" placeholder="Enter the Locations of the company.."/>  
+              <div class="error"></div>          
+<p>       </p>
+              <button type="submit" class="btn btn-primary" name="Button" value="Submit">Submit</button>
+              <div class="error" ></div>
+            </form>
+          </div>         
+        </div>
+      </div>
+
+      <script src="../js/company.js"></script>
+</body>

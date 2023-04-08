@@ -1,0 +1,99 @@
+{
+    "_id" : ObjectId("6427695a2fd48520e8d0ddcd"),
+    "Name" : "Chandana",
+    "Branch" : "CSE",
+    "CompanyPlaced" : "Cognizant Technology Solutions",
+    "CTC" : "4LPA",
+    "Role" : "Software Developer",
+    "PlacementType" : "On Campus",
+    "Story" : "I have attempted return test on festival day(ugadi)😅 it has 3 levels..aptitude,English,coding.I have cleared it and was eligible for Technical round.In technical round they have asked me every programming language starting from C to Cloud. It took around 40mins of technical discussion and they have given one example and asked to write the code in c and python.It went well and I had cleared it and then comes HR round which went with basic questions my strength,weakness,location etc.After this I got mail saying I have been selected",
+    "HowtoPrepare" : "Try to start from basics since most of the recruiters starts with basic and then based on the candidate they will go indeepth questions. Try to cover all the programming languages which you have learned so far. Try to prepare everything in every programming languages",
+    "Suggestions" : "Few words for upcoming students\nLearn every programming language.Be confident when ever your answering  few recruiters try to confuse you.If you don't know the answer for certain questions don't fake it just say I am not aware of it / Sorry I don't have any idea on this. Revise multiple times.",
+    "JobType" : "IT",
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("642847d3ac3dc93fec4611f8"),
+    "Name" : "Sai Lakshmi Keerthana",
+    "Branch" : "CSE",
+    "CompanyPlaced" : "ACCOLITE DIGITAL",
+    "JobType" : "IT",
+    "Role" : "Software Engineer",
+    "PlacementType" : "Off Campus",
+    "HowtoPrepare" : "1. Clear all backlogs and try to maintain a CGPA of 8 to be eligible for 99% of the companies. Data Structures and Algorithms are a must and should be for all development roles. Basics in Computer field subjects like Data Base Management Systems(DBMS), Operating systems, and system design should be strong. Have good knowledge of any programming language and OOPS concepts. If possible, have some good projects on your resume about which you are completely comprehensive.\n\n2. Try to sound confident and maintain a positive attitude. Try to take mock interviews to gain enough experience. Try to improve your communication skills as they play a key role in the recruitment process. There is no need to panic if you can't answer any questions. Calmly tell them that you will try to learn it. Put some effort daily no matter how small it may seem.\n\n3. Give mock tests in aptitude and get familiar with the type of questions that will be asked. Usually, aptitude skills are tested in the written rounds of any company.\n\n4. For practicing coding questions, make use of the platforms like Leetcode, Code chef, Hackerrank, etc by solving questions daily. Keep revising your basics by solving these questions. Try to complete certification courses and doing one or two internships will always help.",
+    "Suggestions" : "Keep in mind that there is always an opportunity for development and learning, so never give up. Learning is never done without errors and defeat, a little progress each day adds up to big results.\n*Now, Go grab your dream job*🤞🏻",
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("642847e2ac3dc93fec4611f9"),
+    "Name" : "Sai Lakshmi Keerthana",
+    "Branch" : "CSE",
+    "CompanyPlaced" : "Fanatics",
+    "JobType" : "IT",
+    "Role" : "Software Engineer",
+    "PlacementType" : "Off Campus",
+    "HowtoPrepare" : "1. Clear all backlogs and try to maintain a CGPA of 8 to be eligible for 99% of the companies. Data Structures and Algorithms are a must and should be for all development roles. Basics in Computer field subjects like Data Base Management Systems(DBMS), Operating systems, and system design should be strong. Have good knowledge of any programming language and OOPS concepts. If possible, have some good projects on your resume about which you are completely comprehensive.\n\n2. Try to sound confident and maintain a positive attitude. Try to take mock interviews to gain enough experience. Try to improve your communication skills as they play a key role in the recruitment process. There is no need to panic if you can't answer any questions. Calmly tell them that you will try to learn it. Put some effort daily no matter how small it may seem.\n\n3. Give mock tests in aptitude and get familiar with the type of questions that will be asked. Usually, aptitude skills are tested in the written rounds of any company.\n\n4. For practicing coding questions, make use of the platforms like Leetcode, Code chef, Hackerrank, etc by solving questions daily. Keep revising your basics by solving these questions. Try to complete certification courses and doing one or two internships will always help.",
+    "Suggestions" : "Keep in mind that there is always an opportunity for development and learning, so never give up. Learning is never done without errors and defeat, a little progress each day adds up to big results.\n*Now, Go grab your dream job*🤞🏻",
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6428481cac3dc93fec4611fa"),
+    "Name" : "Lahari Reddy",
+    "Branch" : "Biotech",
+    "CompanyPlaced" : "intelliPat",
+    "JobType" : "IT",
+    "Role" : "Buisiness Development Associate",
+    "PlacementType" : "On Campus",
+    "HowtoPrepare" : "1. Clear all backlogs and try to maintain a CGPA of 8 to be eligible for 99% of the companies. Data Structures and Algorithms are a must and should be for all development roles. Basics in Computer field subjects like Data Base Management Systems(DBMS), Operating systems, and system design should be strong. Have good knowledge of any programming language and OOPS concepts. If possible, have some good projects on your resume about which you are completely comprehensive.\n\n2. Try to sound confident and maintain a positive attitude. Try to take mock interviews to gain enough experience. Try to improve your communication skills as they play a key role in the recruitment process. There is no need to panic if you can't answer any questions. Calmly tell them that you will try to learn it. Put some effort daily no matter how small it may seem.\n\n3. Give mock tests in aptitude and get familiar with the type of questions that will be asked. Usually, aptitude skills are tested in the written rounds of any company.\n\n4. For practicing coding questions, make use of the platforms like Leetcode, Code chef, Hackerrank, etc by solving questions daily. Keep revising your basics by solving these questions. Try to complete certification courses and doing one or two internships will always help.",
+    "Suggestions" : "Keep in mind that there is always an opportunity for development and learning, so never give up. Learning is never done without errors and defeat, a little progress each day adds up to big results.\n*Now, Go grab your dream job*🤞🏻",
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6428484aac3dc93fec4611fb"),
+    "Name" : "Appala Reddy",
+    "Branch" : "Chemical",
+    "CompanyPlaced" : "CapGemini",
+    "JobType" : "IT",
+    "Role" : "Senior Analyst",
+    "PlacementType" : "On Campus",
+    "HowtoPrepare" : "1. Clear all backlogs and try to maintain a CGPA of 8 to be eligible for 99% of the companies. Data Structures and Algorithms are a must and should be for all development roles. Basics in Computer field subjects like Data Base Management Systems(DBMS), Operating systems, and system design should be strong. Have good knowledge of any programming language and OOPS concepts. If possible, have some good projects on your resume about which you are completely comprehensive.\n\n2. Try to sound confident and maintain a positive attitude. Try to take mock interviews to gain enough experience. Try to improve your communication skills as they play a key role in the recruitment process. There is no need to panic if you can't answer any questions. Calmly tell them that you will try to learn it. Put some effort daily no matter how small it may seem.\n\n3. Give mock tests in aptitude and get familiar with the type of questions that will be asked. Usually, aptitude skills are tested in the written rounds of any company.\n\n4. For practicing coding questions, make use of the platforms like Leetcode, Code chef, Hackerrank, etc by solving questions daily. Keep revising your basics by solving these questions. Try to complete certification courses and doing one or two internships will always help.",
+    "Suggestions" : "Keep in mind that there is always an opportunity for development and learning, so never give up. Learning is never done without errors and defeat, a little progress each day adds up to big results.\n*Now, Go grab your dream job*🤞🏻",
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("64284900ac3dc93fec4611fc"),
+    "Name" : "Sumanth Reddy",
+    "Branch" : "Chemical",
+    "CompanyPlaced" : "Pinclick",
+    "JobType" : "Non-IT",
+    "Role" : "Associate Property Advispr",
+    "PlacementType" : "On Campus",
+    "HowtoPrepare" : "1. Clear all backlogs and try to maintain a CGPA of 8 to be eligible for 99% of the companies. Data Structures and Algorithms are a must and should be for all development roles. Basics in Computer field subjects like Data Base Management Systems(DBMS), Operating systems, and system design should be strong. Have good knowledge of any programming language and OOPS concepts. If possible, have some good projects on your resume about which you are completely comprehensive.\n\n2. Try to sound confident and maintain a positive attitude. Try to take mock interviews to gain enough experience. Try to improve your communication skills as they play a key role in the recruitment process. There is no need to panic if you can't answer any questions. Calmly tell them that you will try to learn it. Put some effort daily no matter how small it may seem.\n\n3. Give mock tests in aptitude and get familiar with the type of questions that will be asked. Usually, aptitude skills are tested in the written rounds of any company.\n\n4. For practicing coding questions, make use of the platforms like Leetcode, Code chef, Hackerrank, etc by solving questions daily. Keep revising your basics by solving these questions. Try to complete certification courses and doing one or two internships will always help.",
+    "Suggestions" : "Keep in mind that there is always an opportunity for development and learning, so never give up. Learning is never done without errors and defeat, a little progress each day adds up to big results.\n*Now, Go grab your dream job*🤞🏻",
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6428493eac3dc93fec4611fd"),
+    "Name" : "Harish Kotla",
+    "Branch" : "ECE",
+    "CompanyPlaced" : "Capgemini",
+    "JobType" : "IT",
+    "Role" : "Software Engineer",
+    "PlacementType" : "Off Campus",
+    "HowtoPrepare" : "1. Clear all backlogs and try to maintain a CGPA of 8 to be eligible for 99% of the companies. Data Structures and Algorithms are a must and should be for all development roles. Basics in Computer field subjects like Data Base Management Systems(DBMS), Operating systems, and system design should be strong. Have good knowledge of any programming language and OOPS concepts. If possible, have some good projects on your resume about which you are completely comprehensive.\n2. Try to sound confident and maintain a positive attitude. Try to take mock interviews to gain enough experience. Try to improve your communication skills as they play a key role in the recruitment process. There is no need to panic if you can't answer any questions. Calmly tell them that you will try to learn it. Put some effort daily no matter how small it may seem.\n3. Give mock tests in aptitude and get familiar with the type of questions that will be asked. Usually, aptitude skills are tested in the written rounds of any company.\n4. For practicing coding questions, make use of the platforms like Leetcode, Code chef, Hackerrank, etc by solving questions daily. Keep revising your basics by solving these questions. Try to complete certification courses and doing one or two internships will always help.",
+    "Suggestions" : "Me control me mind la pettukondi",
+    "__v" : NumberInt(0),
+    "CTC" : "16"
+}
+{
+    "_id" : ObjectId("642849c2ac3dc93fec4611fe"),
+    "Name" : "Katla Karunakar",
+    "Branch" : "Civil",
+    "CompanyPlaced" : "Capgemini",
+    "JobType" : "IT",
+    "Role" : "Senior Analyst",
+    "PlacementType" : "On Campus",
+    "HowtoPrepare" : "1. Clear all backlogs and try to maintain a CGPA of 8 to be eligible for 99% of the companies. Data Structures and Algorithms are a must and should be for all development roles. Basics in Computer field subjects like Data Base Management Systems(DBMS), Operating systems, and system design should be strong. Have good knowledge of any programming language and OOPS concepts. If possible, have some good projects on your resume about which you are completely comprehensive.\n\n2. Try to sound confident and maintain a positive attitude. Try to take mock interviews to gain enough experience. Try to improve your communication skills as they play a key role in the recruitment process. There is no need to panic if you can't answer any questions. Calmly tell them that you will try to learn it. Put some effort daily no matter how small it may seem.\n\n3. Give mock tests in aptitude and get familiar with the type of questions that will be asked. Usually, aptitude skills are tested in the written rounds of any company.\n\n4. For practicing coding questions, make use of the platforms like Leetcode, Code chef, Hackerrank, etc by solving questions daily. Keep revising your basics by solving these questions. Try to complete certification courses and doing one or two internships will always help.",
+    "Suggestions" : "Keep in mind that there is always an opportunity for development and learning, so never give up. Learning is never done without errors and defeat, a little progress each day adds up to big results.\n*Now, Go grab your dream job*🤞🏻",
+    "__v" : NumberInt(0)
+}
