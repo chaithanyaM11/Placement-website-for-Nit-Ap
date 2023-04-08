@@ -2,7 +2,7 @@ const express = require("express");
 const Router = express.Router();
 const Stories = require("../../../schemas/PlacementStoryModel");
 
-Routerr.get("/",async function(req,res){
+Router.get("/",async function(req,res){
     Stories.find({},async function(err,result){
         if(!err){
             res.send(result);
@@ -14,6 +14,6 @@ Routerr.get("/",async function(req,res){
 });
 
 
-Routerr.use(require("./SingleStory"));
+Router.use(require("./SingleStory"));
 
-module.exports = Routerr;
+module.exports = Router;
