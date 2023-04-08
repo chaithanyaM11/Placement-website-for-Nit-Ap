@@ -1,0 +1,2 @@
+All tnp applications must be here
+that includes login, signup, add company, add story, edit company 

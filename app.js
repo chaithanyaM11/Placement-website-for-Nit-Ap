@@ -22,36 +22,14 @@ const TNPSchema = mongoose.Schema({
   Password: {type: String}
 });
 
-const CompanySchema = mongoose.Schema({
-  Name: {type: String},
-  Mail: {type: String},
-  Description: {type: String},
-  PrevYearIntake: {type: [Number]},
-  CurrentYearIntake: {type: Number},
-  Type:{type: String}, 
-  // Type sqays if the company is It or NonIT
-  Branches: {type: [String]},
-  // From what branches they will pick
-  Roles: {type: [String]},
-  // What roles they will choose for us  
-  CTCOffers: {type: [Number]},
-  HiringProcess:{type: String},
-  Locations: {type: String}
-});
+
 
 
 const TNPMember = mongoose.model("TNPMember",TNPSchema);
-const Companies = mongoose.model("Companies",CompanySchema);
 
 
-app.get("/", function(req, res){
-  res.render("index");
-});
 
 
-app.get("/contact",function(req,res){
-  res.render("contact");
-});
 
 // Tnp pages 
 
@@ -169,28 +147,7 @@ app.get("/tnpLogout",function(req,res){
   res.redirect("/tnpLogin")
 });
 
-//Company Pages
-app.get("/Companies",function(req,res){
-  Companies.find({},function(err,companies){
-    res.render("Company/companies",{
-      comp: companies
-    });
-  }); 
-});
-
-app.get("/Companies/:compName",function(req,res){
-  const cname = req.params.compName;
-  Companies.findOne({Name: cname},function(err,Company){
-    if(!err){
-      res.render("Company/aboutCompany",{
-        company: Company,
-      });
-    }
-    else{
-      res.status(401).send("Not Found....");
-    }
-  });
-});
+app.use("/",require("./routes/User/Home"));
 
 app.listen(3000, function(){
   console.log("Server started on port 3000.");

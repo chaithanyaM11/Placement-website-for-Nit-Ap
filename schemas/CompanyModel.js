@@ -3,18 +3,18 @@
 const mongoose = require("mongoose");
 
 const CompanySchema = mongoose.Schema({
-    Name: {type: String},
+    Name: {type: String,required: true},
     Mail: {type: String},
     Description: {type: String},
     PrevYearIntake: {type: [Number]},
     CurrentYearIntake: {type: Number},
-    Type:{type: String}, 
-    Branches: {type: [String]},
+    Type:{type: String,required: true}, 
+    Branches: {type: [String],required: true},
     Roles: {type: [String]},
-    // Requirements:{type:[String]},
-    CTCOffers: {type: [Number]},
-    HiringProcess:{type: String},
-    Locations: {type: String}
+    CTCOffers: {type: String,required: true},
+    HiringProcess:{type: String}
   });
   
+
+
 module.exports = mongoose.model("Companies",CompanySchema);

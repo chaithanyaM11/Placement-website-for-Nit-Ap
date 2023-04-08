@@ -1,0 +1,5 @@
+Users company and placement cell 
+data should be visible here 
+including home also
+when login 
+it should redirect to tnp folder
