@@ -1,13 +1,16 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/placementDB");
+const passportLocalMongoose = require("passport-local-mongoose");
 
-const TNPSchema = mongoose.Schema({
+
+const TNPSchema = new mongoose.Schema({
     Name: {type: String,required: true},
+    Contact: {type:String, required: true},
     Mail_id: {type: String ,required: true},
-    contact: {type:String},
     Department: {type: String,required: true},
-    UserName: {type: String, required: true},
-    Password: {type: String, required: true}
+    username: {type: String, required: true},
+    password: {type: String}
   });
 
-  module.exports = mongoose.model("TNPMember",TNPSchema);
+  TNPSchema.plugin(passportLocalMongoose);
+
+  module.exports = mongoose.model("Member",TNPSchema);

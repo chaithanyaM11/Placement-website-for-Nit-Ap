@@ -1,6 +1,10 @@
 const express = require("express");
 const Router = express.Router();
 const Member = require("../../../schemas/TnpSchema");
+const passportLocalMongoose = require("passport-local-mongoose");
+const passport = require("passport");
+
+
 
 
 Router.get("/",function(req,res){
@@ -8,15 +12,24 @@ Router.get("/",function(req,res){
   });
   
 Router.post("/",function(req,res){
-    const member = new Member({
+  console.log(req.body.password);
+    const newMember = new Member({
       Name: req.body.Name,
+      Contact:req.body.Contact,
       Mail_id: req.body.Mail_id,
       Department: req.body.Department,
-      UserName: req.body.UserName,
-      Password: req.body.Password
+      username: req.body.UserName
     });
-    member.save();
-    res.redirect("/tnpLogin")
+    Member.register(newMember,req.body.password,function(err){
+      if(err){
+        console.log(err);
+        res.redirect("/tnpSignup");
+      }
+      else{
+        console.log("Saved succesfully");
+        res.redirect("/tnpLogin");
+      }
+    });
   });
 
 
