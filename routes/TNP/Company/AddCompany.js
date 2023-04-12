@@ -3,7 +3,12 @@ const Router = express.Router();
 const Companies = require("../../../schemas/CompanyModel");
 
 Router.get("/",async function(req,res){
-    res.render("Company/addCompany");  
+    if(req.isAuthenticated()){
+        res.render("Company/addCompany"); 
+    } 
+    else{
+        res.redirect("/login");
+    }
 });
 
 Router.post("/",async function(req,res){

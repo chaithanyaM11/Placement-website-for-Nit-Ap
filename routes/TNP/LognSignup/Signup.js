@@ -1,10 +1,9 @@
 const express = require("express");
 const Router = express.Router();
-const Member = require("../../../schemas/TnpSchema");
+const Member = require("../../../schemas/MemberModel");
+const User = require("../../../schemas/UserModel");
 const passportLocalMongoose = require("passport-local-mongoose");
 const passport = require("passport");
-
-
 
 
 Router.get("/",function(req,res){
@@ -20,7 +19,8 @@ Router.post("/",function(req,res){
       Department: req.body.Department,
       username: req.body.UserName
     });
-    Member.register(newMember,req.body.password,function(err){
+    newMember.save();
+    User.register({username: req.body.UserName},req.body.password,function(err){
       if(err){
         console.log(err);
         res.redirect("/tnpSignup");
