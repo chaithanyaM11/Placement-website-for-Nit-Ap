@@ -27,7 +27,7 @@ Router.post("/",function(req,res){
       }
       else{
         console.log("Saved succesfully");
-        res.redirect("/tnpLogin");
+        res.redirect("/login");
       }
     });
   });

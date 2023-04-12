@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const passportLocalMongoose = require("passport-local-mongoose");
 
 
-const TNPSchema = new mongoose.Schema({
+const MemberSchema = new mongoose.Schema({
     Name: {type: String,required: true},
     Contact: {type:String, required: true},
     Mail_id: {type: String ,required: true},
@@ -11,6 +11,7 @@ const TNPSchema = new mongoose.Schema({
     password: {type: String}
   });
 
-  TNPSchema.plugin(passportLocalMongoose);
+  MemberSchema.plugin(passportLocalMongoose,{
+    usernameField: 'username'}); //Specifies field for authentication
 
-  module.exports = mongoose.model("Member",TNPSchema);
+  module.exports = mongoose.model("Member",MemberSchema);

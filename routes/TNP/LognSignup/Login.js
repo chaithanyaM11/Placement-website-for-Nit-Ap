@@ -1,30 +1,29 @@
 const express = require("express");
-const flash = require('express-flash');
 const Router = express.Router();
+const passport = require('passport');
 const Member = require("../../../schemas/TnpSchema");
-const session = require('express-session');
 
-
-Router.use(flash());
 
 Router.get("/",async function(req,res){
     res.render("TNP/tnpLoginPage");
 });
    
-Router.post("/",async function(req,res,next){
-    const uname = req.body.UserName;
-    const pass = req.body.Password;
-   
-    Member.findOne({UserName: uname,Password: pass},function(err,member){
-      if(err){
-        return res.send(err);
-      }
-      if(!member){
-        req.flash('error', 'Invalid email or password');
-        return res.redirect('/tnpLogin');
-      }
-      return res.redirect("/TNPPage");
-    });
+Router.post('/',async function(req,res){
+  const member = new Member({
+    username: req.body.UserName,
+    passowrd:req.body.Password
+  });
+  req.login(member, function(err){
+    if(err){
+        console.log(err);
+        res.redirect("/login");
+    }
+    else{
+        passport.authenticate("local")(req,res,function(){
+            res.redirect("/TNPPage"); 
+        });
+    }
+});
 });
 
 
