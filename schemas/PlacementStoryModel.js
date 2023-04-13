@@ -25,8 +25,7 @@ const PlacementStorySchema = new mongoose.Schema({
         required: true
     },
     PlacementType: { //off or on campus
-        type: String,
-        required: true
+        type: String
     },
     Story: {
         type: String
@@ -39,7 +38,8 @@ const PlacementStorySchema = new mongoose.Schema({
         type: String
     },
     Active:{
-        type: Boolean
+        type: Boolean,
+        default: false
     }
 });
 

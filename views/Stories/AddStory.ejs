@@ -1,0 +1,87 @@
+<%- include("../partials/tnp-header"); -%>
+
+    <div class="container">
+        <div class="text-center">
+          <h2>Enter your Story!!</h2>
+        </div>
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-6">
+            <form action="/stories/addStory" method="post" id="placement-form">
+
+              <label class="form-label">Name</label>
+              <input type="text" name="Name" class="form-control" placeholder="Enter Your Name"/>
+              <div class="error"></div>
+              
+
+              <select name="Branch" id="branch" class="form-control">
+                <option value=" ">Select Your Branch</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="CHEM">CHEM</option>
+                <option value="BIOTECH">BIOTECH</option>
+                <option value="MME">MME</option>
+              </select>     
+              <div ></div> 
+              <div class="error" id="selected-Branch"></div>
+              
+
+              <label class="form-label">Company Placed</label>
+              <input type="text" name="Company" class="form-control" placeholder="Enter Your Name"/>
+              <div class="error"></div>
+              
+
+              <label class="form-label">CTC</label>
+              <input type="text" name="CTC" class="form-control" placeholder=" Its yout wish to enter this field"/>
+              <div class="error"></div>
+              
+
+              <label class="form-label">Type</label>
+              <select name="Type" id="type" class="form-control">
+                <option value=" ">Select</option>
+                <option value="IT">IT</option>
+                <option value="Non-IT">Non-IT</option>
+                <option value="Both">Both</option>
+              </select>
+              <div class="error"></div>
+              
+              <label class="form-label">Role </label>
+              <input type="text" name="Role" class="form-control" placeholder="Enter the role that you have got offered"/>
+              <div class="error"></div>
+              
+
+              
+              
+              <label class="form-label">Placement type</label>
+              <select name="Type" id="type" class="form-control">
+                <option value="On Campus">On Campus</option>
+                <option value="Off Campus">Off Campus</option>
+                <option value="nil">Dont want to say</option>
+              </select>
+              <div class="error"></div>
+
+              <label class="form-label">Story</label>
+              <textarea type="textarea" name="Story" class="form-control" placeholder="Say us about your placement story (Its upto your interest to fill this field)" rows="3"></textarea>
+              <div class="error"></div>
+              
+
+              <label class="form-label">How to Prepare</label>
+              <textarea type="textarea" name="Prepare" class="form-control" placeholder="Say how to prepare for placements " rows="3"></textarea>
+              <div class="error"></div>
+              
+
+              <label class="form-label">Suggestions</label>
+              <textarea type="textarea" name="Suggestions" class="form-control" placeholder="What are your suggestions for the upcoming students" rows="3"></textarea>
+              <div class="error"></div>
+
+              <button type="submit" class="btn btn-primary" name="Button" value="Submit">Submit</button>
+              <div class="error" ></div>
+            </form>
+          </div>         
+        </div>
+      </div>
+
+
+</body>

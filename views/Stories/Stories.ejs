@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Stories</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="aos/aos.css" rel="stylesheet">
+  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/story.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Our Services Section ======= -->
+    <section id="services" class="services sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Placement Stories</h2>
+          <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+        <% stories.forEach(function(story){ %>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item  position-relative">
+                <div class="pic"><img src="images/contact/avatarwomen.png" class="img-fluid" alt=""></div>
+              <h3><%= story.Name %></h3>
+              <br>
+              <h3> Company: <%= story.CompanyPlaced %> </h3>
+              <h4> Branch: <%= story.Branch %> </h4>
+              <a href="/stories/<%= story.Name %>" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+
+      </div>
+<a href="/stories/addStory"> Add Story </a>
+
+
+      <%- include("../partials/footer"); -%>

@@ -21,9 +21,10 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+app.use(express.static("vendor"));
 
 app.use(session({
-  secret: "This is my secret",
+  secret: process.env.secret,
   resave: false,
   saveUninitialized: false
 }));
