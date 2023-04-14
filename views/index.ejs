@@ -63,58 +63,20 @@
         </div>
 
         <div class="row">
-
+        <% stories.forEach(function(story){ %>
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="student d-flex align-items-start">
               <div class="pic"><img src="images/contact/avatarmen.png" class="img-fluid" alt=""></div>
               <div class="student-info">
-                <h4>Surya Sai Indra</h4>
-                <span>Chief Executive Officer</span>
-                <p>Currently working at Google with ctc 64 Lakhs</p>
-                <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+                <h4><%= story.Name %></h4>
+                <span><%= story.Role %></span>
+                <p>Got Placed at <%= story.CompanyPlaced %></p>
+                <a href="/stories/<%= story.Name %>" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
                 
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="student d-flex align-items-start">
-              <div class="pic"><img src="images/contact/avatarmen.png" class="img-fluid" alt=""></div>
-              <div class="student-info">
-                <h4>Uday Chaitanya</h4>
-                <span>Product Manager</span>
-                <p>Currently working at KIA with ctc 60 Lakhs</p>
-                <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="student d-flex align-items-start">
-              <div class="pic"><img src="images/contact/avatarwomen.png" class="img-fluid" alt=""></div>
-              <div class="student-info">
-                <h4>M Chaithanya</h4>
-                <span>CTO</span>
-                <p>Currently working at Amazon with ctc 32 lakhs</p>
-                <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
-            <div class="student d-flex align-items-start">
-              <div class="pic"><img src="images/contact/avatarwomen.png" class="img-fluid" alt=""></div>
-              <div class="student-info">
-                <h4>O Sushma</h4>
-                <span>Accountant</span>
-                <p>Currently working at Microsoft with ctc 30 lakhs</p>
-                <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-
-              </div>
-            </div>
-          </div>
+        <% }); %>
 
         </div>
 

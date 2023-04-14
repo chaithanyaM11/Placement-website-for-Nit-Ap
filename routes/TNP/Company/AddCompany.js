@@ -4,7 +4,7 @@ const Companies = require("../../../schemas/CompanyModel");
 
 Router.get("/",async function(req,res){
     if(req.isAuthenticated()){
-        res.render("Company/addCompany"); 
+        res.render("TNP/Company/addCompany"); 
     } 
     else{
         res.redirect("/login");

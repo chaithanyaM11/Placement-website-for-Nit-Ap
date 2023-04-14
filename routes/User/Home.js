@@ -3,9 +3,14 @@ const Router = express.Router();
 const contactPath = require("./Contact");
 const companyPath = require("./Companies/Companies");
 const storyPath = require("./Stories/Stories");
+const Stories = require("../../schemas/PlacementStoryModel");
+
+
 
 Router.get("/",async function(req,res){
-    res.render("index");
+    Stories.find({},function(err,result){
+        res.render("index",{stories: result});
+    }).limit(4);
 });
 
 Router.use("/contact",contactPath);
