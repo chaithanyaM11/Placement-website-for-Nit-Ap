@@ -35,7 +35,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/placementDB");
+mongoose.connect(process.env.DB);
 mongoose.set("useCreateIndex",true);
 
 
@@ -47,9 +47,8 @@ passport.deserializeUser(User.deserializeUser());
 // TNP Interface
 app.use("/tnpSignup",signupRoute);
 app.use("/login",loginRoute);
-app.use("/logout",logoutRoute);
-
 app.use("/TNPPage",tnpRoute);
+app.use("/logout",logoutRoute);
 
 
 //User Interface

@@ -1,4 +1,7 @@
 <%- include("../partials/stories/storyheader"); -%>
+<br>
+<br>
+<br>
 
     <!-- ======= Our Services Section ======= -->
     <section id="services" class="services sections-bg">
@@ -6,28 +9,23 @@
 
         <div class="section-header">
           <h2>Placement Stories</h2>
-          <p>Find the placement details and experience of our students who got placed</p>
         </div>
 
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
         <% stories.forEach(function(story){ %>
-          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="student d-flex align-items-start">
-              <div class="pic"><img src="/images/contact/avatarmen.png" class="img-fluid" alt=""></div>
-              <div class="student-info">
-                <h4><%= story.Name %></h4>
-                <span><%= story.Role %></span>
-                <p>Currently working at <%= story.CompanyPlaced %></p>
-                <a href="/stories/<%= story.Name %>" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-                
-              </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item  position-relative">
+                <div class="pic"><img src="images/contact/avatarwomen.png" class="img-fluid" alt=""></div>
+              <h3><%= story.Name %></h3>
+              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <a href="/stories/<%= story.Name %>" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
-          <% }); %>
+        <% }); %>
+        <p style="background-color: aqua;"> <a href="/stories/addStory"> Click here </a> to add your story</p>
         </div>
-        <p> <a href="/stories/addStory">Click here </a>to add your story</p>
       </div>
-    </section>
+  </footer>
 
 
-      <%- include("../partials/stories/storyfooter"); -%>
+<%- include("../partials/stories/storyfooter"); -%>

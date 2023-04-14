@@ -5,7 +5,7 @@ const Stories = require("../../../schemas/PlacementStoryModel");
 Router.get("/:Name",async function(req,res){
     Stories.findOne({Name: req.params.Name},async function(err,result){
         if(!err){
-            res.render("Stories/SingleStory",{student: result});
+            res.render("Stories/SingleStory",{story: result});
         }
         else{
             res.send(err)

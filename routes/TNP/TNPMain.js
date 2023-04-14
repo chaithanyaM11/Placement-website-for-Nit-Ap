@@ -1,9 +1,18 @@
 const express = require("express");
 const Router = express.Router();
+const Member = require("../../schemas/MemberModel");
+
 
 Router.get("/", async function(req,res){
     if(req.isAuthenticated()){
-        res.render("TNP/tnpPage");
+        Member.findOne({username: req.user.username},function(err,result){
+            if(!err){
+                res.render("TNP/tnpPage",{member: result});
+            }
+            else{
+                res.send(err);
+            }
+        })
     }
     else{
         res.redirect("/login");

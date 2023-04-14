@@ -1,23 +1,20 @@
 <%- include("../partials/stories/storyheader"); -%>
-
+<br><br><br>
     <!-- ======= Our Services Section ======= -->
     <section id="services" class="services sections-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Placement Stories</h2>
-          <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
+          <h2>Placement Story of <%= story.Name %></h2>
         </div>
 
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-4 col-md-6">
             <div class="service-item  position-relative">
-                <% console.log(student);  %>
                 <div class="pic"><img src="../images/contact/avatarwomen.png" class="img-fluid" alt=""></div>
-              <h3><%= student.Name %></h3>
-              <br>
-              <h3> Company: <%= student.CompanyPlaced %> </h3>
-              <h4> Branch: <%= student.Branch %> </h4>
+              <h3><%= story.Name %></h3>
+              <h3> Company: <%= story.CompanyPlaced %> </h3>
+              <h4> Branch: <%= story.Branch %> </h4>
             </div>
           </div>
 
