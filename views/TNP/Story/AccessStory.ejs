@@ -1,0 +1,6 @@
+<%- include("../partials/tnp-header"); -%>
+
+<h1> Read the story and choose weather to post it or delet it </h1>
+    <% stories.forEach(function(story){ %>
+        <a href="/TNPPage/addStory/<%= story.Name %>"><%= story.Name %></a>
+    <% }); %>

@@ -42,10 +42,10 @@ form.addEventListener("submit", function(event) {
   }
   if(confpass.value !== password.value){
     passValid = false;
-    error[5].textContent = "Password didn't matched!!!";
+    error[6].textContent = "Password didn't matched!!!";
   }
   else{
-    error[5].textContent = " ";
+    error[6].textContent = " ";
   }
   if (!isValid || !passValid) {
     event.preventDefault();

@@ -11,6 +11,7 @@ Router.post("/",async function(req,res){
     const story = new Stories({
         Name: req.body.Name,
         Branch: req.body.Branch,
+        Mail_id: req.body.Mail_id,
         CompanyPlaced: req.body.Company,
         CTC: req.body.CTC,
         JobType: req.body.Type,
@@ -18,7 +19,8 @@ Router.post("/",async function(req,res){
         PlacementType: req.body.PlacementType,
         Story: req.body.Story,
         HowtoPrepare: req.body.Prepare,
-        Suggestions: req.body.Suggestions
+        Suggestions: req.body.Suggestions,
+        Active: false
     });
 
     story.save(function(err){

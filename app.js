@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require('lodash');
+
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
@@ -11,6 +12,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const User = require("./schemas/UserModel");
 const loginRoute = require("./routes/TNP/LognSignup/Login");
 const signupRoute =require("./routes/TNP/LognSignup/Signup");
+const logoutRoute = require("./routes/TNP/LognSignup/Logout");
 const tnpRoute = require("./routes/TNP/TNPMain");
 const userRoute = require("./routes/User/Home");
 
@@ -22,6 +24,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use(express.static("vendor"));
+
 
 app.use(session({
   secret: process.env.secret,
@@ -44,6 +47,7 @@ passport.deserializeUser(User.deserializeUser());
 // TNP Interface
 app.use("/tnpSignup",signupRoute);
 app.use("/login",loginRoute);
+app.use("/logout",logoutRoute);
 
 app.use("/TNPPage",tnpRoute);
 

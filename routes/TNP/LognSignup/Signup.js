@@ -17,6 +17,7 @@ Router.post("/",function(req,res){
       Contact:req.body.Contact,
       Mail_id: req.body.Mail_id,
       Department: req.body.Department,
+      Designation: req.body.Designation,
       username: req.body.UserName
     });
     newMember.save();

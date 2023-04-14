@@ -1,0 +1,13 @@
+<%- include("../partials/tnp-header"); -%>
+<%= story %>
+
+<form action="/TNPPage/addStory/<%= story.Name %>" method="delete">
+    <input type="hidden" value="null">
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+<form action="/TNPPage/addStory/<%= story.Name %>" method="patch">
+    <input type="hidden" value="null">
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+

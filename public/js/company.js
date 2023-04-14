@@ -11,27 +11,15 @@ const ctc_btn = document.getElementById("add-ctc");
 const proc = document.getElementById("Hiring");
 const proc_btn = document.getElementById("add-proc");
 
-// const branch = document.getElementById("branch");
-// const selected_branch = document.getElementById("selected-Branch");
+
 
 const type = document.getElementById("type");
 
 const inputs = form.elements;
-// var Branches = [];
+
 
 const CTC = /^[0-9]+$/;
-// branch.addEventListener("change",function(){
-//   const i = branch.selectedIndex;
-//   if(i!==0){
-//     let selected_brnch = branch.options[i];
-//     if(selected_brnch){
-//       const brnch = selected_brnch.value;
-//       Branches.push(brnch);
-//       selected_branch.textContent = Branches.join(', ');
-//       branch.options[i].remove();
-//     }
-//    }
-//  });
+
 
 // Email validation
 email.addEventListener("blur",function(event){
@@ -108,10 +96,9 @@ ctc_btn.addEventListener("click",function(event){
   ctc.appendChild(newDiv);
   ctc.appendChild(del_btn);
   ctc.appendChild(newDiv1);
-  // ctc.appendChild(space1);
+
 
   del_btn.addEventListener("click",function(event){
-    // space1.remove();
     ctc.removeChild(space);
     ctc.removeChild(newInput);
     ctc.removeChild(newDiv);

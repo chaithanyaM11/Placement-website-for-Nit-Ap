@@ -5,6 +5,10 @@ const PlacementStorySchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    Mail_id: {
+        type: String,
+        required: true
+    },
     Branch:{
         type:String,
         required: true
@@ -38,8 +42,7 @@ const PlacementStorySchema = new mongoose.Schema({
         type: String
     },
     Active:{
-        type: Boolean,
-        default: false
+        type: Boolean
     }
 });
 

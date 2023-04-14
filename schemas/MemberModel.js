@@ -6,6 +6,7 @@ const MemberSchema = new mongoose.Schema({
     Contact: {type:String, required: true},
     Mail_id: {type: String ,required: true},
     Department: {type: String,required: true},
+    Designation: {type: String,required: true},
     username: {type: String, required: true}
 });
 

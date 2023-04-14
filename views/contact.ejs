@@ -1,38 +1,22 @@
-<%- include("partials/header"); -%>
+<%- include("partials/main/header"); -%>
 <section id="vision">
 </section>
        
-<div class="avatar" >
-    <h2 class="heading">OUR TEAM</h2>
-    <p class="heading">Meet the team :</p>
-        <div class="w3-row row justify-content-center my-5"><br>
-            <div class="avatardetails">
-                <img src="images\contact\avatarmen.png" alt="avatar" class="avatarimg">
-                <h3>AAAA</h3>
-                <p>Web Designer</p>
-                <a href="mailto:AAAA@gmail.com.">Email:AAAA@gmail.com</a>
-            </div>
-      
-            <div class="avatardetails">
-                <img src="images\contact\avatarmen.png" alt="avatar"  class="avatarimg">
-                <h3>BBBB</h3>
-                <p>Support</p>
-                <a href="mailto:BBBB@gmail.com.">Email:BBBB@gmail.com</a>
-
-            </div>
-      
-            <div class="avatardetails">
-                <img src="images\contact\avatarwomen.png" alt="avatar"  class="avatarimg">
-                <h3>CCCC</h3>
-                <p>Boss man</p>
-                <a href="mailto:CCCC@gmail.com.">Email:CCCC@gmail.com</a>
-            </div>
-      
-            <div class="avatardetails">
-                <img src="images\contact\avatarwomen.png" alt="avatar"  class="avatarimg">
-                <h3>DDDD</h3>
-                <p>Fixer</p>
-                <a href="mailto:DDDD@gmail.com.">Email:DDDD@gmail.com</a>
-            </div>
+<div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+    <% Member.forEach(function(member){ %>
+      <div class="col-lg-6 col-md-4  justify-content-center" style="padding-left: 15%;">
+        <div class="service-item  position-relative">
+            <div class="pic"><img src="images/contact/avatarmen.png" class="img-fluid" alt=""></div>
+          <h3><%= member.Name %></h3>
+          <h5> Mail_id: </h5>
+          <p> <%= member.Mail_id %> </p>
+          <h5> Branch: </h5>
+          <p><%= member.Department %> </p>
+          <h5>Designation: </h5> <p> <%= member.Designation %> </p>
         </div>
+      </div>
+      <% }); %>
     </div>
+
+
+<%- include("partials/main/footer"); -%>
