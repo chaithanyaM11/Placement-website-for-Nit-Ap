@@ -1,12 +1,35 @@
     <%- include("../partials/company/company-header"); -%>
+<br><br><br><br><br>
 
-
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <div class="row justify-content-center my-5">
-            <h1>Name</h1>
-            <p><%= company.Name %></p>
-            <br>
-            <p><%= company.Description %></p>
+            <div class="col">
+                <div class="pic"><img src="../images/nit-logo.png" class="img-fluid" alt="Img"></div>
+                <h3><%= company.Name %></h3>
+                <h3> <b> Mail: </b> <%= company.Mail %> </h3>
+                <h3> <b> Type: </b> <%= company.Type %> </h3>
+                <h4> <b> Eligible Branch:</b> <%= company.Branches.join(" ") %> </h4>
+            </div>
+            <div class="col">
+                <h3>Description</h3>
+                <p><%= company.Description %></p>
+                <h3>Previour year's Intake</h3>
+                <p> <%= company.PrevYearIntake %> </p>
+                <% if(company.Roles!== ""){ %>
+                    <h3>Roles offered </h3>
+                      <p><%= company.Roles.join(" ") %></p>  
+                <% } %>
+                <% if(company.CTCOffers){ %>
+                    <h3>CTC offered </h3>
+                    <p><%= company.CTCOffers %> LPA</p>  
+                <% } %>
+                <% if(company.HiringProcess){ %>
+                    <h3>CTC offered </h3>
+                    <p><%= company.HiringProcess %> LPA</p>  
+                <% } %>
+            </div>
+
+            
         </div>
     </div>
 

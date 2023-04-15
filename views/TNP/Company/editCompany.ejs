@@ -1,8 +1,22 @@
-<%- include("../../partials/tnp-header"); -%>
+<%- include("../../partials/tnp-story-header"); -%>
 
-<div class="container">
-    <div class="row justify-content-center my-5">
-        
-        <select name="" id=""></select>
+<div class="container" >
+    <div class="row justify-content-center my-5" id="another">
+        <select name="option" id="selectedField" class="form-control">
+                <option value="">Select Field that you want to edit</option>
+                <option value="1">Name</option>
+                <option value="2">Mail</option>
+                <option value="3">Description</option>
+                <!-- <option value="4">PrevYearIntake</option>
+                <option value="5">Cu</option> -->
+                <option value="6">Type</option>
+                <option value="7">Branches</option>
+                <option value="8">Roles</option>
+                <option value="9">CTC Offers</option>
+                <option value="10">Hiring Process</option>
+              </select>  
     </div>
+    <button class="btn btn-primary" id="addButton" value="Add">Another</button>
+
 </div>
+<script src="../../js/editcomp.js"></script>

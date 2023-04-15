@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
+const methodOverride = require("method-override");
 
 const User = require("./schemas/UserModel");
 const loginRoute = require("./routes/TNP/LognSignup/Login");
@@ -24,7 +25,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use(express.static("vendor"));
-
+app.use(methodOverride('_method'));
 
 app.use(session({
   secret: process.env.secret,

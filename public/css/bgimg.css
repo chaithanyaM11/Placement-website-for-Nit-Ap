@@ -1,0 +1,10 @@
+body{
+    background-image: url("../images/nit-logo.png");
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(3px); /* Add blur effect */
+      -webkit-backdrop-filter: blur(3px);
+  }
+

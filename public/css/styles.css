@@ -1,3 +1,16 @@
+body{
+  background-color: #b2afaf;
+  background-image: url("../images/nit-logo.png");
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-position: center;
+  background-attachment: fixed;
+  backdrop-filter: blur(3px); /* Add blur effect */
+	-webkit-backdrop-filter: blur(3px);
+}
+
+
+
 /* Nav-Bar */
 
 .nav-link{
@@ -21,27 +34,7 @@
   }
 
 
-/* Vision */
 
-.vision-image{
-  background-image: url("../images/placement.png");
-  background-repeat: no-repeat;
-  background-size: 90%;
-  height: 700px;
-  width: 700px;
-  position: relative;
-  top: 15px;
-  left: 15px; 
-}
-
-.vision-text {
-    position: absolute;
-    top: 20%;
-    left: 4%;
-    right: 50%;
-   background-color: rgba(0, 0, 0, 0.3);
-   color:white;
-}
 
 
 /* Table */
@@ -113,7 +106,9 @@ tr{
 .avatardetails a{
   padding-right: 5px;
 }
-
+button{
+  padding-left: 15%;
+}
 
 
 .error {
@@ -121,3 +116,4 @@ tr{
   font-size: 12px;
   margin-bottom: 20px;
 }
+

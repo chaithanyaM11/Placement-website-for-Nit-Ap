@@ -1,26 +1,43 @@
  <%- include("../partials/tnp-header"); -%>
 
 <div class="intro justify-content-center container">
-    <h1>Welcome to TNP page</h1>
-    <p>Check if there are new placementstories that are to add up</p>
-    <p>Kindly make sure you enter the details of a new company correct</p>
-    <p>Edit company will be activated soon</p>
-    <p>Add member : Only you can add a new Member to access this data</p>
+
 </div>
 
 
- <div class="containe">
-    <div class="justify-content-center">
-        <h1>Name: </h1>
-        <p><%= member.Name %></p>
-        <h1>Contact: </h1>
-        <p><%= member.Contact %></p>
-        <h1>Mail: </h1>
-        <p><%= member.Mail_id %></p>
-        <h1>Department: </h1>
-        <p><%= member.Department %></p>
-        <h1>Designation : </h1>
-        <p><%= member.Designation %></p>
-
+ <div class="container justify-content-center">
+    <div class="row justify-content-center">
+        <h1>Welcome to TNP page</h1>
     </div>
+    <br>
+    <br>
+    <div class="row justify-content-center" style="padding-left: 15%;">
+        <div class="col">
+            <h3> <b>Name:</b>  <%= member.Name %> </h3>
+            <p></p>
+            <h3> <b> Contact:</b> <%= member.Contact %> </h3>
+            <p></p>
+            <h3><b> Mail:</b> <%= member.Mail_id %></h3>    
+        </div>
+        <div class="col">
+            <h3> <b>Department:</b> <%= member.Department %></h3>
+            <p></p>
+            <h3> <b>Designation:</b> <%= member.Designation %></h3>
+            <p></p>  
+        </div>
+    </div>
+ </div>
+<br><br>
+ <div class="container justify-content-center" >
+    <div class="row justify-content-center">
+        <h2>Features you avail :</h2>
+    </div>
+    <div class="justify-content-center">
+        <p >1. Add a company details in the Data Base</p>
+        <br>
+        <p>2. Give access to the Placement stories that were submitted by students</p>
+        <br>
+        <p>3. Edit company details or delete them</p>
+    </div>
+
  </div>
