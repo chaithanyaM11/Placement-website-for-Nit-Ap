@@ -1,63 +1,83 @@
-const newOption = document.getElementById("another")
-const addButton = document.getElementById("addButton")
-const selected = document.getElementById("selectedField")
+const form = document.getElementById("company-form");
 
-addButton.addEventListener("click",function(event){
-    const newSelect = document.createElement("select");
-    newSelect.type = "text";
-    newSelect.name = "option";
-    newSelect.className = "form-control";
-    newSelect.placeholder = "Enter other roles offered by them";
+const roles = document.getElementById("Roles");
+const role_btn = document.getElementById("add-role");
+const DelBtn = document.getElementsByClassName("dlt");
+const delInp = document.getElementsByClassName("dlt-inpt");
+const comp_del_btn = document.getElementById("dlt-comp");
+
+const inputs = form.elements;
+
+let changed = false;
+
+role_btn.addEventListener("click",function(event){
+    changed = true;
+    const space = document.createElement("br");
+    const newDiv = document.createElement("div");
+    const newDiv1 = document.createElement("div");
+    newDiv.className = "error";
+    newDiv1.className = "error";
     
-    const NewOption = document.createElement("option");
-    NewOption.value = ""
-    NewOption.innerHTML = "Select this field"
-    newSelect.appendChild(NewOption)
-
-    const NewOption1 = document.createElement("option");
-    NewOption1.value = "1"
-    NewOption1.innerHTML = "Name"
-    newSelect.appendChild(NewOption1)
-
-    const NewOption2 = document.createElement("option");
-    NewOption2.value = "2"
-    NewOption2.innerHTML = "Mail"
-    newSelect.appendChild(NewOption2)
-
-    const NewOption3 = document.createElement("option");
-    NewOption3.value = "3"
-    NewOption3.innerHTML = "Description"
-    newSelect.appendChild(NewOption3)
-
-    const NewOption4 = document.createElement("option");
-    NewOption4.value = "6"
-    NewOption4.innerHTML = "Type"
-    newSelect.appendChild(NewOption4)
-
-    const NewOption5 = document.createElement("option");
-    NewOption5.value = "7"
-    NewOption5.innerHTML = "Branches"
-    newSelect.appendChild(NewOption5)
-
-    const NewOption6 = document.createElement("option");
-    NewOption6.value = "8"
-    NewOption6.innerHTML = "Roles"
-    newSelect.appendChild(NewOption6)
-
-    const NewOption7 = document.createElement("option");
-    NewOption7.value = "9"
-    NewOption7.innerHTML = "CTC Offers"
-    newSelect.appendChild(NewOption7)
-
-    const NewOption8 = document.createElement("option");
-    NewOption8.value = "10"
-    NewOption8.innerHTML = "Hiring Process"
-    newSelect.appendChild(NewOption8)
-
-    newOption.appendChild(newSelect);
-
+    roles.appendChild(space);
   
+    const del_btn = document.createElement("button");
+    del_btn.className = "btn btn-danger";
+    del_btn.innerHTML = "Remove";
+    del_btn.setAttribute("type","button");
+    del_btn.value = "dlt";
+  
+    const newRole = document.createElement("input");
+    newRole.type = "text";
+    newRole.name = "Roles";
+    newRole.className = "form-control";
+    newRole.placeholder = "Enter other roles offered by them"; 
+    roles.appendChild(newRole);  
+    roles.appendChild(newDiv);
+    roles.appendChild(del_btn);
+    roles.appendChild(newDiv1);
+  
+    del_btn.addEventListener("click",function(event){
+      space.remove();
+      roles.removeChild(newRole);
+      roles.removeChild(newDiv); 
+      roles.removeChild(newDiv1);
+      roles.removeChild(del_btn);
+      
+    });
+  });
 
+  for(let i=0;i<DelBtn.length;i++){
+    DelBtn[i].addEventListener("click",function(event){
+        delInp[i].remove();
+        changed = true;
+    });
+}
+
+
+for(let i=0;i<inputs.length;i++){
+    inputs[i].addEventListener("change",function(event){
+        changed = true;
+    });
+}
+
+
+
+form.addEventListener("submit",function(event){
+    for(let i=0;i<inputs.length;i++){
+        if(!inputs[i].value){
+            changed=false;
+        }
+    }    
+    if(changed === false){
+        alert("No changes have made yet");
+        event.preventDefault();
+    }
+    else{
+        alert("Updated succesfully");
+    }
+    
 });
 
-
+comp_del_btn.addEventListener("click",function(event){
+    alert("Deleted Succesfully!!!");
+});

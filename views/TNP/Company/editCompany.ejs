@@ -1,22 +1,177 @@
 <%- include("../../partials/tnp-story-header"); -%>
 
-<div class="container" >
-    <div class="row justify-content-center my-5" id="another">
-        <select name="option" id="selectedField" class="form-control">
-                <option value="">Select Field that you want to edit</option>
-                <option value="1">Name</option>
-                <option value="2">Mail</option>
-                <option value="3">Description</option>
-                <!-- <option value="4">PrevYearIntake</option>
-                <option value="5">Cu</option> -->
-                <option value="6">Type</option>
-                <option value="7">Branches</option>
-                <option value="8">Roles</option>
-                <option value="9">CTC Offers</option>
-                <option value="10">Hiring Process</option>
-              </select>  
-    </div>
-    <button class="btn btn-primary" id="addButton" value="Add">Another</button>
+    <div class="container">
+        <div class="text-center">
+          <h2>Update the entries here </h2>
+          <h3>If you dont want to enter CTC and Hiring process fill them as Disclosed</h3>
+          <form action="/TNPPage/editCompany/<%= company.Name %>?_method=DELETE" method="post">
+            <button type="submit" class="btn btn-danger" id="dlt-comp" name="role-btn" value="dlt"> Remove</button>
+          </form>
+        </div>
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-6">
+            <form action="/TNPPage/editCompany/<%= company.Name %>?_method=PUT" method="post" id="company-form">
 
-</div>
+              <label class="form-label">Company Name</label>
+              <input type="text" name="Name" class="form-control" placeholder="As per details given to our institution" value="<%= company.Name %>"/>
+              <div class="error"></div>
+              
+
+              <label class="form-label">Company Mail</label>
+              <input type="email" id="email" name="Mail_id" class="form-control" placeholder="Enter companie's official mail id" value="<%= company.Mail %>"/>
+              <div class="error"></div>
+              
+
+              <label class="form-label">Description</label>
+              <% if(company.Description){ %>
+                <textarea type="textarea" name="Description" class="form-control" placeholder="Say about the company"><%= company.Description %></textarea>
+              <% } else { %>
+                <textarea type="textarea" name="Description" class="form-control" placeholder="Say about the company">Disclosed</textarea>
+              <% } %>
+
+              <div class="error"></div>
+              
+
+              <label class="form-label">PrevYearIntake</label>
+              <input type="number" name="PrevYearIntake" value="<%= company.PrevYearIntake %>" class="form-control"/>
+              <div class="error"></div>
+              
+
+              <label class="form-label">CurrentYearIntake</label>
+              <input class="form-control" name="CurrentYearIntake" value="<%= company.CurrentYearIntake %>" type="number"/>
+              <div class="error"></div>
+              
+              
+              <label class="form-label">Type</label>
+              <select name="Type" id="type" class="form-control">
+                <% if(company.Type === "IT") {%>
+                    <option value="IT" selected>IT</option>   
+                <% } else {%>
+                    <option value="IT">IT</option>
+                <% } %>
+                <% if(company.Type === "Non-IT") {%>
+                    <option value="Non-IT" selected>Non-IT</option>   
+                <% } else {%>
+                    <option value="Non-IT">Non-IT</option>
+                <% } %>
+                <% if(company.Type === "Both") {%>
+                    <option value="Both" selected>Both</option>   
+                <% } else {%>
+                    <option value="Both">Both</option>
+                <% } %>
+              </select>
+              <div class="error"></div>
+              
+
+              <label class="form-label" for="branch">Branch</label>
+              <p>Choose the branches that the company offer's the job </p>
+              <div id="Branches">
+                    <% if(company.Branches.includes( "CSE")){ %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="CSE" id="CSE" checked/>
+                    <% } else { %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="CSE" id="CSE"/>
+                    <% } %>
+                    <label class="form-check-label" for="CSE"> CSE </label>
+                    <div class="error"></div>
+
+                    <% if(company.Branches.includes( "ECE")){ %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="ECE" id="ECE" checked/>
+                    <% } else { %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="ECE" id="ECE"/>
+                    <% } %>
+                    <label class="form-check-label" for="ECE"> ECE </label>
+                    <div class="error"></div>
+                    
+                    <% if(company.Branches.includes("EEE")){ %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="EEE" id="EEE" checked/>
+                    <% } else { %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="EEE" id="EEE"/>
+                    <% } %>
+                    <label class="form-check-label" for="EEE"> EEE </label>
+                    <div class="error"></div>
+
+                    <% if(company.Branches.includes("MECH")){ %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="MECH" id="MECH" checked/>
+                    <% } else { %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="MECH" id="MECH"/>
+                    <% } %>
+                    <label class="form-check-label" for="MECH"> MECH </label>
+                    <div class="error"></div>
+                    
+                    <% if(company.Branches.includes("CIVIL")){ %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="CIVIL" id="CIVIL" checked/>
+                    <% } else { %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="CIVIL" id="CIVIL"/>
+                    <% } %>
+                    <label class="form-check-label" for="CIVIL"> CIVIL </label>
+                    <div class="error"></div>
+
+                    <% if(company.Branches.includes( "CHEM")){ %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="CHEM" id="CHEM" checked/>
+                    <% } else { %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="CHEM" id="CHEM"/>
+                    <% } %>
+                    <label class="form-check-label" for="CHEM"> CHEM </label>
+                    <div class="error"></div>
+
+                    <% if(company.Branches.includes( "BIOTECH")){ %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="BIOTECH" id="BIOTECH" checked/>
+                    <% } else { %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="BIOTECH" id="BIOTECH"/>
+                    <% } %>
+                    <label class="form-check-label" for="BIOTECH"> BIOTECH </label>
+                    <div class="error"></div>
+                    
+                    <% if(company.Branches.includes( "MME")){ %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="MME" id="MME" checked/>
+                    <% } else { %>
+                        <input class="form-check-input" name="Branches" type="checkbox" value="MME" id="MME"/>
+                    <% } %>
+                    <label class="form-check-label" for="MME"> MME </label>
+                    <div class="error"></div>
+
+            </div>
+              
+              <label class="form-label">Roles</label>
+              <div id="Roles">
+                <input type="text" class="form-control" name="Roles" placeholder="Enter the roles they offered till now.." value="<%= company.Roles[0] %>"/>
+                <div class="error"></div>
+
+                <% for(let i=1 ; i < company.Roles.length; i++){ %>
+                    <div class="dlt-inpt">
+                        <input type="text" class="form-control" name="Roles" placeholder="Enter the roles they offered till now.." value="<%= company.Roles[i] %>"/>
+                        <div class="error"></div>
+                        <button type="button" class="btn btn-danger dlt" name="role-btn" value="dlt"> Remove</button>
+                    </div>
+                    <% } %>
+              </div>        
+              <button type="button" class="btn btn-primary" id="add-role" name="role-btn" value="role"> Add new</button>
+              <div class="error"></div>
+
+
+              <label class="form-label">CTC Offered</label>
+              <div id="CTC">
+                <input type="text" class="form-control" name="CTC" id="" placeholder="Enter the ctc they offered in prev year... (in lpa)" value="<%= company.CTCOffers %>"/>
+                <div class="error"></div>
+              </div>           
+
+
+
+              <label class="form-label">Hiring Proccess</label>
+              <div id="Hiring">
+                <input type="text" name="Hiring_Process" class="form-control" placeholder="Enter the Hiring Process.." value="Disclosed"/>
+                <div class="error"></div>
+              </div>
+              <div class="error"></div>
+         
+<p>       </p>
+              <button type="submit" class="btn btn-primary" name="Button" value="Submit">Submit</button>
+              <div class="error" ></div>
+            </form>
+          </div>         
+        </div>
+      </div>
+
+
+
 <script src="../../js/editcomp.js"></script>

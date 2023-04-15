@@ -13,6 +13,9 @@ Router.get("/", async function(req,res){
             }
         });
     }
+    else{
+        res.redirect("/login");
+    }
 });
 
 Router.use(require("./AddorDelStory"));

@@ -12,22 +12,26 @@ Router.get("/",async function(req,res){
 });
 
 Router.post("/",async function(req,res){
-    const Company = new Companies({
-        Name : req.body.Name,
-        Mail : req.body.Mail_id,
-        Description : req.body.Description,
-        PrevYearIntake : req.body.PrevYearIntake,
-        CurrentYearIntake : req.body.CurrentYearIntake,
-        Type : req.body.Type,
-        Branches : req.body.Branches,
-        Roles : req.body.Roles,
-        CTCOffers : req.body.CTC,
-        HiringProcess : req.body.Hiring_Process,
-        Locations : req.body.Location
-      });
-      Company.save();
-      console.log("Submitted successfully!!...");
-      res.redirect("/TNPPage");
+    if(req.isAuthenticated()){
+        const Company = new Companies({
+            Name : req.body.Name,
+            Mail : req.body.Mail_id,
+            Description : req.body.Description,
+            PrevYearIntake : req.body.PrevYearIntake,
+            CurrentYearIntake : req.body.CurrentYearIntake,
+            Type : req.body.Type,
+            Branches : req.body.Branches,
+            Roles : req.body.Roles,
+            CTCOffers : req.body.CTC,
+            HiringProcess : req.body.Hiring_Process
+        });
+        Company.save();
+        console.log("Submitted successfully!!...");
+        res.redirect("/TNPPage");
+    }
+    else{
+        res.redirect("/login");
+    }
 })
 
 

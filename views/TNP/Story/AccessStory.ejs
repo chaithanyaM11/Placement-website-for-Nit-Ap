@@ -1,6 +1,10 @@
 <%- include("../../partials/tnp-header"); -%>
+<% if(stories.toString() !== ""){ %>
+    <h1> Read the story and choose weather to post it or delet it </h1>
+        <% stories.forEach(function(story){ %>
+            <a href="/TNPPage/addStory/<%= story.Name %>"><%= story.Name %></a>
+        <% }); %>
+<% } else{ %>
+    <h1 class="justify-content-center"> No new stories yet </h1>
+<% } %>
 
-<h1> Read the story and choose weather to post it or delet it </h1>
-    <% stories.forEach(function(story){ %>
-        <a href="/TNPPage/addStory/<%= story.Name %>"><%= story.Name %></a>
-    <% }); %>
